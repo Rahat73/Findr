@@ -15,8 +15,8 @@ import clsx from "clsx";
 import NextLink from "next/link";
 
 import { Logo, SearchIcon } from "@/src/components/icons";
-import { ThemeSwitch } from "@/src/components/theme-switch";
 import { siteConfig } from "@/src/config/site";
+import { ThemeSwitch } from "./theme-switch";
 
 export const Navbar = () => {
   return (

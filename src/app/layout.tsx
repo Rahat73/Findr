@@ -4,7 +4,7 @@ import { Metadata, Viewport } from "next";
 
 import { Providers } from "./providers";
 
-import { Navbar } from "@/src/components/navbar";
+import { Navbar } from "@/src/components/ui/navbar";
 import { fontSans } from "@/src/config/fonts";
 import { siteConfig } from "@/src/config/site";
 
