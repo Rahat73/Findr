@@ -1,5 +1,3 @@
-import { Input } from "@nextui-org/input";
-import { Kbd } from "@nextui-org/kbd";
 import { Link } from "@nextui-org/link";
 import {
   NavbarBrand,
@@ -14,8 +12,9 @@ import { link as linkStyles } from "@nextui-org/theme";
 import clsx from "clsx";
 import NextLink from "next/link";
 
-import { Logo, SearchIcon } from "@/src/components/icons";
+import { Logo } from "@/src/components/icons";
 import { siteConfig } from "@/src/config/site";
+import NavbarDropdown from "./navbar-dropdown";
 import { ThemeSwitch } from "./theme-switch";
 
 export const Navbar = () => {
@@ -25,7 +24,7 @@ export const Navbar = () => {
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
             <Logo />
-            <p className="font-bold text-inherit">ACME</p>
+            <p className="font-bold text-inherit">FINDr</p>
           </NextLink>
         </NavbarBrand>
         <ul className="hidden lg:flex gap-4 justify-start ml-2">
@@ -53,7 +52,9 @@ export const Navbar = () => {
         <NavbarItem className="hidden sm:flex gap-2">
           <ThemeSwitch />
         </NavbarItem>
-        <NavbarItem className="hidden md:flex"></NavbarItem>
+        <NavbarItem className="hidden sm:flex gap-2">
+          <NavbarDropdown />
+        </NavbarItem>
       </NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
